@@ -1,0 +1,25 @@
+    What is Spring boot?
+Spring is the Spring framework.
+Spring Framework is an enterprise java framework that lets you write java applications.
+SpringBoot is a bootstrap or a way to quickly create a spring application.
+
+    Official definition of Spring boot
+Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
+
+    Spring
+This is an Application framework that helps you build enterprise java applications.
+    Problems with Spring
+1)It is a huge framework.
+2)Multiple setup steps.
+3)Multiple configuration steps.
+4)Multiple build and deploy steps.
+    Spring Boot
+1)Opinionated : It gives you a good starting point.
+2)Convention over Configuration.
+3)Stand alone: You can just run a spring boot application.
+4)Production ready.
+    Maven
+This lets you declare all the dependencies you need in a single file(pom.xml).
+
+    Creating a Project
+1)Create a java maven project
