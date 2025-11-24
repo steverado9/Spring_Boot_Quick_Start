@@ -21,5 +21,16 @@ This is an Application framework that helps you build enterprise java applicatio
     Maven
 This lets you declare all the dependencies you need in a single file(pom.xml).
 
-    Creating a Project
-1)Create a java maven project
+    Creating a Project using spring boot
+1)Create a maven project
+steps
+1)click file, new , project and select maven.
+GroupId is like the package name
+ArtifactId is like the project name - course-api
+name- Java Brains Course Api
+-add the <parent> project to convert the maven project to a fully functional spring boot project.
+meaning the course_api project is now a child of <Parent>
+The <parent> contains spring boots configuration and it automatically adds it to the child i.e our project
+2)add required <dependency> inside the <dependencies> tag
+3)Create a javaclass that is the starting point(run) of our application
+Annotate the javaclass with
