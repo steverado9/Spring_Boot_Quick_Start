@@ -33,4 +33,8 @@ meaning the course_api project is now a child of <Parent>
 The <parent> contains spring boots configuration and it automatically adds it to the child i.e our project
 2)add required <dependency> inside the <dependencies> tag
 3)Create a javaclass that is the starting point(run) of our application
-Annotate the javaclass with
+Annotate the javaclass with @SpringBootApplication
+create a main method and add this code inside the main method
+SpringApplication.run(Classname.class, the main class arguemnt);
+4)adding a controller
+A controller in spring is a class with the @Controller annotation.
