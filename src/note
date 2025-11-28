@@ -21,8 +21,8 @@ This is an Application framework that helps you build enterprise java applicatio
     Maven
 This lets you declare all the dependencies you need in a single file(pom.xml).
 
-    Creating a Project using spring boot
-1)Create a maven project
+    Creating a Project using spring boot Part 1
+-Create a maven project
 steps
 1)click file, new , project and select maven.
 GroupId is like the package name
@@ -35,13 +35,13 @@ The <parent> contains spring boots configuration and it automatically adds it to
 3)Create a javaclass that is the starting point(run) of our application
 Annotate the javaclass with @SpringBootApplication
 create a main method and add this code inside the main method
-SpringApplication.run(Classname.class, the main class arguemnt);
+SpringApplication.run(Classname.class, the main class argument);
 4)adding a controller
 A controller in spring is a class with the @RestController annotation.
 In a controller, you can have methods that map to url request.
 and the way to annotate a particular request to a particular method, we use
 @RequestMapping and it takes the url as a parameter that it is supposed to map to.
-The default method for a @RequestMpping is a GET request.
+The default method for a @RequestMapping is a GET request.
 
     Reasons why spring boot decided to have the Embedded Tomcat server
 Tomcat server: This is the default Servlet container but can can be changed.
@@ -60,7 +60,7 @@ Topics:
 GET     /topics         Gets all topics
 GET     /topics/id      Get the topic
 POST    /topics         Create new topic
-PUT     /topics/is      Updates the topic
+PUT     /topics/id      Updates the topic
 DELETE  /topics/id      Delete the topic
 
     How to create a business service
@@ -71,3 +71,33 @@ When making a post request on postman
 go to the header
 key             value
 content-type application/json
+
+        Creating a Project using spring boot Part 2
+-Using Spring Initializr
+steps
+1) Got to the website - https://start.spring.io
+choose Maven
+input the necessary details and add dependencies.
+click generate to download a zip file
+
+     Creating a Project using spring boot Part 3
+-Using spring boot CLI
+type "spring boot CLI" on the search engine
+The Spring Boot CLI is a command line tool that you can use to bootstrap a new project from start.spring.io or encode a password.
+Download and extract the zip file
+go to your command line and move to the directory of the extracted
+cd \Users\USER\IdeaProjects\spring-boot-cli-4.0.0-bin
+and type ls
+you will see two executable files
+spring and spring.bat
+execute spring.bat for windows
+-create a groovy file with this command - nano app.groovy
+in the nano ide
+@RestController
+class AppCtrl {
+    @RequestMapping("/")
+    String app() {
+    "Hello World"
+    }
+}
+./soring.bat run app.groovy
