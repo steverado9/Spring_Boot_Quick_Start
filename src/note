@@ -91,8 +91,9 @@ and type ls
 you will see two executable files
 spring and spring.bat
 execute spring.bat for windows
--create a groovy file with this command - nano app.groovy
-in the nano ide
+-create a groovy file with this command - code app.groovy
+This will create a groovy file in your vs code
+Then create the controller class
 @RestController
 class AppCtrl {
     @RequestMapping("/")
@@ -100,4 +101,50 @@ class AppCtrl {
     "Hello World"
     }
 }
-./soring.bat run app.groovy
+don't need to return cos groovy automatically returns
+./spring run app.groovy "ps: this works for old spring boot"
+
+    Creating a Project using spring boot Part 4
+ Using the STS(Spring Tool suite) IDE
+ steps
+1)right click project explorer
+2)click on new
+3)click spring starter project and fill the necessary details.
+
+    How to customize your spring boot application
+1)The easiest way is by using a property file called "application.properties"
+you can change the default port in the application.properties
+This file is created in the resources folder
+    How to know the keys to input in application.properties
+ go to spring website and search "Common application properties"
+
+    What is SPRING DATA JPA
+Jpa - java persistence Api
+This helps you do ORM(Object Relational Mapping) when you are connecting to a database
+SQL database = relational database meaning we have tables and keys(primary and foreign) which are relational.
+ORM handles the queries and mapping for you
+JPA - is a way for you to use the orm
+Spring data jpa makes working with orms easier
+-To use this , you have to add spring data jpa in dependencies
+-To use data jpa, we need to annotate the class we want to save to the database with @Entity
+-Spring data jpa framework automatically creates a class that does crud operation, that why we have to implement it in our repository
+-The CrudRepository takes in two generic types, which are the Entity and Id type = CrudRepository<EntityName, Id>
+
+    How to generate a jar file and deploy into any servlet container
+go to the command line and cd to the project folder
+type : mvn clean install if maven is installed globally
+or
+.\mvnw clean install
+This works even if Maven is NOT installed globally, because the wrapper downloads Maven automatically.
+
+then type
+java -jar target\course-api-data-jpa-0.0.1-SNAPSHOT.jar
+
+    Spring Boot Actuator
+Spring boot can help you monitor your application after deployment
+Actuator: This is a dependency you add to monitor your project after deployment.
+https://spring.io/guides/gs/actuator-service
+
+TODO
+Read on
+java8 lamda basics.
